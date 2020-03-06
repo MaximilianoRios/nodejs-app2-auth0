@@ -1,0 +1,17 @@
+doctype html
+html
+  head
+    title= `${title}`
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    h1 Auth0 SAML integration page
+
+    a(href="/") Home
+    if locals.user
+      a(href="/user") Profile
+      a(href="/logout") Log Out
+    else
+      a(href="/login") Log In
+
+    block content
+
